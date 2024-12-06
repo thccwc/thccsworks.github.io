@@ -1,0 +1,83 @@
+/* Variables */
+:root {
+    --background: #eeeeee;
+    --cube-size: 300px;
+    --perspective: 600px;
+    --cube-perspective: 150px;
+  }
+  
+  /* General Styles */
+  body, html {
+    margin: 0;
+  }
+  
+  .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: var(--background);
+  }
+  
+  .cube-container {
+    width: var(--cube-size);
+    height: var(--cube-size);
+    perspective: var(--perspective);
+  }
+  
+  .cube {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform-style: preserve-3d;
+    transform: translateZ(calc(-1 * var(--cube-perspective))) rotateX(-25deg) rotateY(-50deg);
+  }
+  
+  .cube .face {
+    position: absolute;
+    height: var(--cube-size);
+    width: var(--cube-size);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.5); /* Transparent white */
+    border: solid 3px white;
+    background-size: cover; /* Ensures the image covers the entire face */
+    background-position: center; /
+  }
+  
+  /* Face Orientations */
+  .cube .face.front {
+    transform: rotateY(0deg) translateZ(var(--cube-perspective));
+    background-image: url('Bach.png');
+  }
+  
+  .cube .face.back {
+    transform: rotateY(180deg) translateZ(var(--cube-perspective));
+    background-image: url('Bach2.png');
+  }
+  
+  .cube .face.top {
+    transform: rotateX(90deg) translateZ(var(--cube-perspective));
+    background-image: url('Sketch2.png');
+  }
+  
+  .cube .face.bottom {
+    transform: rotateX(-90deg) translateZ(var(--cube-perspective));
+    background-image: url('Sketch1.png');
+  }
+  
+  .cube .face.left {
+    transform: rotateY(90deg) translateZ(var(--cube-perspective));
+    background-image: url('Bach3.png');
+  }
+  
+  .cube .face.right {
+    transform: rotateY(-90deg) translateZ(var(--cube-perspective));
+    background-image: url('Bach4.png');
+  }
+  

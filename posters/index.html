@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <style> 
+        html {
+           cursor : url(smallbunny.PNG), auto;
+        }
+        body {
+            background:#eeeeee ;
+            perspective: 500px;
+            overflow-x: hidden;
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        figure {
+            position: sticky;
+            top: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 100vw;
+            height: 100vh;
+        }
+
+        img {
+            width: 500px;
+            height: auto;
+            border-radius: 3px;
+            transition: transform 0.3s ease, opacity 0.3s ease;
+        }
+
+        /* Adjust the rotation for each image */
+        figure:nth-child(1) img {
+            transform: scale(0.6) rotate(-12.5deg);
+        }
+
+        figure:nth-child(2) img {
+            transform: scale(0.6) rotate(-10deg);
+        }
+
+        figure:nth-child(3) img {
+            transform: scale(0.6) rotate(-7.5deg);
+        }
+
+        figure:nth-child(4) img {
+            transform: scale(0.6) rotate(-5deg);
+        }
+
+        figure:nth-child(5) img {
+            transform: scale(0.6) rotate(-2.5deg);
+        }
+
+        figure:nth-child(6) img {
+            transform: scale(0.6) rotate(0deg);
+        }
+
+        figure:nth-child(7) img {
+            transform: scale(0.6) rotate(2.5deg);
+        }
+
+        figure:nth-child(8) img {
+            transform: scale(0.6) rotate(5deg);
+        }
+
+        figure:nth-child(9) img {
+            transform: scale(0.6) rotate(7.5deg);
+        }
+
+        figure:nth-child(10) img {
+            transform: scale(0.6) rotate(10deg);
+        };
+        </style>
+    <body>
+        <script>
+            var photos = [
+            'ftfinal2.png',
+           'ftfinal5.png',
+           'ftfinal6.png',
+           'ftfinal8.png',
+           'ftfinal9.png',
+           'ftfinal11.png',
+           'ftfinal12.png',
+           'ftfinal14.png',
+           'ftfinal18.png',
+           'ftfinal19.png',
+        ];
+        photos.forEach(photo => {
+            let figure = document.createElement('figure');
+            let img = document.createElement('img');
+            img.src = photo;
+            img.alt = "Photo";
+            figure.appendChild(img);
+            document.body.appendChild(figure);
+        });
+</script>
+        <script src="" async defer></script>
+    </body>
+</html>
